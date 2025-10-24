@@ -14,6 +14,7 @@
 ### 1.1 Install Dependencies
 
 ```bash
+git clone https://github.com/kaizer113/LocationFlex
 python -m venv .
 source ./bin/activate
 pip install -r requirements.txt
