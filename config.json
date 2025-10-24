@@ -1,0 +1,45 @@
+{
+  "redis": {
+    "host": "redis-11893.c46631.us-east-1-mz.ec2.cloud.rlrcp.com",
+    "port": 11893,
+    "db": 0,
+    "password": "ynrmZKnoSGQKZGGgasGjmmh5H8boNhRS",
+    "socket_timeout": 5.0,
+    "socket_connect_timeout": 5.0,
+    "retry_on_timeout": true,
+    "decode_responses": true,
+    "max_connections": 50
+  },
+  "writer": {
+    "num_writers": 2,
+    "batch_size": 10,
+    "stream_name": "ip_work_queue",
+    "consumer_group": "ip_writers",
+    "consumer_timeout_ms": 5000,
+    "max_retries": 3,
+    "retry_delay_seconds": 1.0,
+    "pipeline_timeout": 30.0,
+    "key_ttl_seconds": 259200
+  },
+  "reader": {
+    "num_readers": 1,
+    "batch_size": 100,
+    "read_timeout_ms": 1000
+  },
+  "network": {
+    "default_blocks": [
+      "8.8.8.0/24",
+      "1.1.1.0/24",
+      "208.67.222.0/24",
+      "4.4.4.0/24",
+      "9.9.9.0/24"
+    ],
+    "block_size": 24,
+    "exclude_private": false,
+    "exclude_multicast": true,
+    "exclude_reserved": true
+  },
+  "version": "v22",
+  "log_level": "INFO",
+  "log_format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+}
